@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=MedievalSharp&display=swap');
 
-:root {
-  --main-glow: rgba(180, 95, 30, 0.45);
-  --border-color: #482312;
-}
-
 ::selection {
   background: #a85822;
   color: #120a06;
@@ -30,44 +25,48 @@ body {
   line-height: 1.8;
   margin: 0;
   padding: 0;
-  position: relative;
-}
-
-div, p {
-  color: #c7b299;
-}
-
-#zen-wrap {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 0 0 20px;
-  padding: 40px 0;
-  align-items: start;
 }
 
 .summary, .preamble {
   grid-column: 2;
   background: rgba(14, 7, 4, 0.65);
-  border: 2px solid var(--border-color);
+  border: 2px solid #482312;
   padding: 24px;
   margin-bottom: 25px;
   border-radius: 8px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(160, 80, 20, 0.08);
 }
 
-.explanation, .participation, .benefits, .requirements {
+.explanation {
   background: rgba(14, 7, 4, 0.65);
-  border: 2px solid var(--border-color);
+  border: 2px solid #482312;
   padding: 26px;
   border-radius: 8px;
-  position: relative;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(160, 80, 20, 0.08);
 }
 
-div.explanation.participation {
-  border-color: #5c2b14;
+.participation {
+  background: rgba(14, 7, 4, 0.65);
+  border: 2px solid #5c2b14;
+  padding: 26px;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(160, 80, 20, 0.08);
+}
+
+.benefits {
+  background: rgba(14, 7, 4, 0.65);
+  border: 2px solid #482312;
+  padding: 26px;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(160, 80, 20, 0.08);
+}
+
+.requirements {
+  background: rgba(14, 7, 4, 0.65);
+  border: 2px solid #482312;
+  padding: 26px;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(160, 80, 20, 0.08);
 }
 
 div p {
@@ -115,30 +114,11 @@ p:first-of-type {
 
 p:last-of-type {
   padding-bottom: 5px;
-}
-
-p:nth-child(2) {
-  opacity: 0.98;
-}
-
-p:nth-last-child(1) {
   line-height: 1.7;
-}
-
-p:nth-of-type(1) {
-  color: #c7b299;
-}
-
-p:nth-last-of-type(1) {
-  color: #c7b299;
 }
 
 p:only-child {
   margin: 0;
-}
-
-p:only-of-type {
-  line-height: 1.7;
 }
 
 p:empty {
@@ -149,12 +129,11 @@ header {
   grid-column: 2;
   text-align: center;
   background: rgba(14, 7, 4, 0.65);
-  border: 2px solid var(--border-color);
+  border: 2px solid #482312;
   padding: 30px 20px;
   border-radius: 8px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(160, 80, 20, 0.1);
   margin-bottom: 25px;
-  position: relative;
 }
 
 header h1 {
@@ -163,7 +142,7 @@ header h1 {
   color: #b0622a;
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 4px #000, 0 0 15px var(--main-glow);
+  text-shadow: 2px 2px 4px #000, 0 0 15px rgba(180, 95, 30, 0.45);
   margin-bottom: 5px;
   display: inline-block;
   vertical-align: middle;
@@ -207,12 +186,11 @@ header h2, #zen-intro h2 {
   grid-column: 2;
   text-align: center;
   background: rgba(14, 7, 4, 0.65);
-  border: 2px solid var(--border-color);
+  border: 2px solid #482312;
   padding: 30px 20px;
   border-radius: 8px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(160, 80, 20, 0.1);
   margin-bottom: 25px;
-  position: relative;
 }
 
 #zen-intro h1 {
@@ -221,7 +199,7 @@ header h2, #zen-intro h2 {
   color: #b0622a;
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 4px #000, 0 0 15px var(--main-glow);
+  text-shadow: 2px 2px 4px #000, 0 0 15px rgba(180, 95, 30, 0.45);
   margin-bottom: 5px;
   display: inline-block;
   vertical-align: middle;
@@ -297,32 +275,22 @@ header h2, #zen-intro h2 {
   text-shadow: 1px 1px 2px #000;
 }
 
-[title] {
+#zen-sidebar a[title] {
+  color: #f0c385;
+  letter-spacing: 1px;
   cursor: help;
 }
 
-[title="Road to Enlightenment"] {
-  color: #f0c385;
-}
-
-[title~="Enlightenment"] {
-  letter-spacing: 1px;
-}
-
-[lang|="en"] {
+#zen-sidebar a {
   font-family: 'Cinzel', serif;
 }
 
-a[href^="http"] {
-  font-weight: 600;
+#zen-sidebar a:hover {
+  color: #ffb703;
 }
 
-a[href$=".css"] {
-  text-decoration: underline;
-}
-
-a[href*="csszen"] {
-  color: #f0c385;
+a {
+  font-family: 'Cinzel', serif;
 }
 
 a:link {
@@ -351,14 +319,10 @@ a:focus {
   outline-offset: 3px;
 }
 
-:not(p) {
-  box-sizing: border-box;
-}
-
 footer {
   grid-column: 1;
   background: rgba(14, 7, 4, 0.75);
-  border: 2px solid var(--border-color);
+  border: 2px solid #482312;
   border-radius: 8px;
   padding: 16px;
   font-family: 'Cinzel', serif;
@@ -367,21 +331,8 @@ footer {
   text-align: left;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(160, 80, 20, 0.08);
   margin-top: 5px;
-  position: relative;
-}
-
-footer::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 90px;
-  background: url('viking_loot_chest.jpg') no-repeat center;
-  background-size: contain;
-  margin-top: 12px;
-  filter: drop-shadow(0 0 8px rgba(180, 95, 30, 0.4));
 }
 
 footer a {
   color: #f2e2cb;
-  text-decoration: underline;
-}
+  text
