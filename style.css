@@ -1,1 +1,387 @@
-/* Empty file for template. Remember to edit only this file and not the HTML file */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=MedievalSharp&display=swap');
+
+:root {
+  --main-glow: rgba(180, 95, 30, 0.45);
+  --border-color: #482312;
+}
+
+::selection {
+  background: #a85822;
+  color: #120a06;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050302;
+  background-image: url('dungeon.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #c7b299;
+  font-family: 'Cinzel', serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+div, p {
+  color: #c7b299;
+}
+
+#zen-wrap {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 0 0 20px;
+  padding: 40px 0;
+  align-items: start;
+}
+
+.summary, .preamble {
+  grid-column: 2;
+  background: rgba(14, 7, 4, 0.65);
+  border: 2px solid var(--border-color);
+  padding: 24px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(160, 80, 20, 0.08);
+}
+
+.explanation, .participation, .benefits, .requirements {
+  background: rgba(14, 7, 4, 0.65);
+  border: 2px solid var(--border-color);
+  padding: 26px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(160, 80, 20, 0.08);
+}
+
+div.explanation.participation {
+  border-color: #5c2b14;
+}
+
+div p {
+  font-size: 1rem;
+}
+
+#zen-sidebar > div {
+  background: rgba(14, 7, 4, 0.75);
+  border: 2px solid #5c2c16;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.85), inset 0 0 25px rgba(180, 95, 30, 0.12);
+}
+
+h3 + p {
+  margin-top: 10px;
+}
+
+p ~ p {
+  margin-top: 15px;
+}
+
+p::first-letter {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #b0622a;
+  text-shadow: 0 0 5px rgba(176, 98, 42, 0.3);
+}
+
+p::first-line {
+  letter-spacing: 0.5px;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p:first-of-type {
+  font-weight: 500;
+}
+
+p:last-of-type {
+  padding-bottom: 5px;
+}
+
+p:nth-child(2) {
+  opacity: 0.98;
+}
+
+p:nth-last-child(1) {
+  line-height: 1.7;
+}
+
+p:nth-of-type(1) {
+  color: #c7b299;
+}
+
+p:nth-last-of-type(1) {
+  color: #c7b299;
+}
+
+p:only-child {
+  margin: 0;
+}
+
+p:only-of-type {
+  line-height: 1.7;
+}
+
+p:empty {
+  display: none;
+}
+
+header {
+  grid-column: 2;
+  text-align: center;
+  background: rgba(14, 7, 4, 0.65);
+  border: 2px solid var(--border-color);
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(160, 80, 20, 0.1);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+header h1 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 2.6rem;
+  color: #b0622a;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px #000, 0 0 15px var(--main-glow);
+  margin-bottom: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header h1::before {
+  content: '';
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url('torch.jpg') no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 15px;
+  filter: drop-shadow(0 0 6px rgba(180, 95, 30, 0.5));
+}
+
+header h1::after {
+  content: '';
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: url('torch.jpg') no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
+  margin-left: 15px;
+  filter: drop-shadow(0 0 6px rgba(180, 95, 30, 0.5));
+}
+
+header h2, #zen-intro h2 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.3rem;
+  color: #a8845e;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 4px #000;
+}
+
+#zen-intro {
+  grid-column: 2;
+  text-align: center;
+  background: rgba(14, 7, 4, 0.65);
+  border: 2px solid var(--border-color);
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(160, 80, 20, 0.1);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+#zen-intro h1 {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 2.6rem;
+  color: #b0622a;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px #000, 0 0 15px var(--main-glow);
+  margin-bottom: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.summary h3, .preamble h3, .explanation h3, .participation h3, .benefits h3, .requirements h3 {
+  font-family: 'MedievalSharp', cursive;
+  color: #b0622a;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000, 0 0 12px rgba(180, 95, 30, 0.4);
+  position: relative;
+  z-index: 1;
+  padding-bottom: 50px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.summary h3::after, .preamble h3::after, .explanation h3::after, .participation h3::after, .benefits h3::after, .requirements h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50px;
+  background: url('sword.jpg') no-repeat center;
+  background-size: contain;
+  opacity: 0.85;
+  mix-blend-mode: screen;
+  z-index: -1;
+  filter: drop-shadow(0 0 5px rgba(180, 95, 30, 0.3));
+}
+
+#zen-sidebar {
+  grid-column: 1;
+  grid-row: 1 / span 10;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 25px;
+  z-index: 10;
+}
+
+#zen-sidebar h3 {
+  font-family: 'MedievalSharp', cursive;
+  color: #f0c385;
+  font-size: 1.15rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #7a3210;
+  padding-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+#zen-sidebar ul {
+  list-style: square;
+  padding-left: 18px;
+  margin: 0;
+}
+
+#zen-sidebar li {
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+  color: #f2e2cb;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #000;
+}
+
+[title] {
+  cursor: help;
+}
+
+[title="Road to Enlightenment"] {
+  color: #f0c385;
+}
+
+[title~="Enlightenment"] {
+  letter-spacing: 1px;
+}
+
+[lang|="en"] {
+  font-family: 'Cinzel', serif;
+}
+
+a[href^="http"] {
+  font-weight: 600;
+}
+
+a[href$=".css"] {
+  text-decoration: underline;
+}
+
+a[href*="csszen"] {
+  color: #f0c385;
+}
+
+a:link {
+  color: #f2e2cb;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:visited {
+  color: #d9b891;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffb703;
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(255, 183, 3, 0.6);
+}
+
+a:active {
+  color: #d90429;
+}
+
+a:focus {
+  outline: 2px dashed #b0622a;
+  outline-offset: 3px;
+}
+
+:not(p) {
+  box-sizing: border-box;
+}
+
+footer {
+  grid-column: 1;
+  background: rgba(14, 7, 4, 0.75);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  color: #c7b299;
+  text-align: left;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(160, 80, 20, 0.08);
+  margin-top: 5px;
+  position: relative;
+}
+
+footer::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 90px;
+  background: url('viking_loot_chest.jpg') no-repeat center;
+  background-size: contain;
+  margin-top: 12px;
+  filter: drop-shadow(0 0 8px rgba(180, 95, 30, 0.4));
+}
+
+footer a {
+  color: #f2e2cb;
+  text-decoration: underline;
+}
