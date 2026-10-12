@@ -13,7 +13,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
-
+/* how the dungeon image was made into the background, using position and margin 0*/
 body {
   background-color: #050302;
   background-image: url('dungeon.jpg');
@@ -95,7 +95,7 @@ p::first-letter {
   color: #b0622a;
   text-shadow: 0 0 5px rgba(176, 98, 42, 0.3);
 }
-
+/* making children to space letters..*/
 p::first-line {
   letter-spacing: 0.5px;
 }
@@ -124,7 +124,7 @@ p:only-child {
 p:empty {
   display: none;
 }
-
+/* lots of grid and header for the boxes.. guh..*/
 header {
   grid-column: 2;
   text-align: center;
@@ -159,7 +159,7 @@ header h1::before {
   margin-right: 15px;
   filter: drop-shadow(0 0 6px rgba(180, 95, 30, 0.5));
 }
-
+/* nesting the torches side by side on the CSS zen garden title*/
 header h1::after {
   content: '';
   display: inline-block;
@@ -204,7 +204,7 @@ header h2, #zen-intro h2 {
   display: inline-block;
   vertical-align: middle;
 }
-
+/* font creation!*/
 .summary h3, .preamble h3, .explanation h3, .participation h3, .benefits h3, .requirements h3 {
   font-family: 'MedievalSharp', cursive;
   color: #b0622a;
@@ -219,7 +219,7 @@ header h2, #zen-intro h2 {
   margin-top: 0;
   margin-bottom: 20px;
 }
-
+/* nesting the sword under each title*/
 .summary h3::after, .preamble h3::after, .explanation h3::after, .participation h3::after, .benefits h3::after, .requirements h3::after {
   content: '';
   position: absolute;
@@ -259,7 +259,7 @@ header h2, #zen-intro h2 {
   margin-bottom: 12px;
   text-shadow: 1px 1px 2px #000;
 }
-
+/* lots of sidebars..*/
 #zen-sidebar ul {
   list-style: square;
   padding-left: 18px;
@@ -318,7 +318,7 @@ a:focus {
   outline: 2px dashed #b0622a;
   outline-offset: 3px;
 }
-
+/*flexy boxy footer*/
 footer {
   grid-column: 1;
   background: rgba(14, 7, 4, 0.75);
